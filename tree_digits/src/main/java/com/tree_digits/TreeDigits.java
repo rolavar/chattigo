@@ -17,7 +17,7 @@ public class TreeDigits {
 	}
 
 	public String resolveArithmetic(int n) {
-		BigDecimal sqrt = BigDecimal.valueOf(5).sqrt(MathContext.DECIMAL128).add(BigDecimal.valueOf(3));
+		BigDecimal sqrt = BigDecimal.valueOf(5).sqrt(MathContext.DECIMAL32).add(BigDecimal.valueOf(3));
 		return format(extractTreeNumbers(
 				BigDecimal.valueOf(Math.pow(sqrt.doubleValue(), n)).setScale(1, RoundingMode.HALF_UP).unscaledValue()));
 	}
